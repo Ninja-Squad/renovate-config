@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "local>Ninja-Squad/renovate-config:base",
+    "local>Ninja-Squad/renovate-config:typescript-patch-only",
+    ":semanticCommitTypeAll(chore)"
+  ],
+  "automerge": true,
+  "automergeType": "branch",
+  "packageRules": [
+    {
+      "description": "Require manual review for major updates",
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    }
+  ]
+}

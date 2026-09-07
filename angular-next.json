@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "description": "Group Angular next releases for repositories tracking the next tag",
+      "matchPackageNames": ["@angular/**"],
+      "followTag": "next",
+      "groupName": "angular and cli",
+      "groupSlug": "angular-and-cli"
+    }
+  ]
+}

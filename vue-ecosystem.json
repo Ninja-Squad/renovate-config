@@ -1,0 +1,35 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "description": "Group Pinia packages",
+      "matchPackageNames": ["pinia**", "@pinia/**"],
+      "groupName": "pinia",
+      "groupSlug": "pinia"
+    },
+    {
+      "description": "Group vee-validate packages",
+      "matchPackageNames": ["vee-validate**", "@vee-validate/**"],
+      "groupName": "vee-validate",
+      "groupSlug": "vee-validate"
+    },
+    {
+      "description": "Group Vite packages separately from Vitest",
+      "matchPackageNames": ["vite**", "@vitejs/**", "!vitest**"],
+      "groupName": "vite",
+      "groupSlug": "vite"
+    },
+    {
+      "description": "Group Vitest packages",
+      "matchPackageNames": ["vitest**", "@vitest/**"],
+      "groupName": "vitest",
+      "groupSlug": "vitest"
+    },
+    {
+      "description": "Keep TypeScript updates separate from other dependencies",
+      "matchPackageNames": ["typescript"],
+      "groupName": "typescript",
+      "groupSlug": "typescript"
+    }
+  ]
+}
