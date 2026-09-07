@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
-      "description": "Group Playwright packages and Docker image after a shared cooldown",
+      "description": "Group Playwright packages and Docker image",
       "matchDatasources": ["npm", "docker"],
       "matchPackageNames": [
         "mcr.microsoft.com/playwright",
@@ -10,8 +10,14 @@
         "@playwright/**"
       ],
       "groupName": "playwright",
-      "groupSlug": "playwright",
-      "minimumReleaseAge": "3 days"
+      "groupSlug": "playwright"
+    },
+    {
+      "description": "Keep pending Playwright npm releases in the grouped update",
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["playwright", "@playwright/**"],
+      "minimumReleaseAge": "3 days",
+      "internalChecksFilter": "none"
     }
   ]
 }
