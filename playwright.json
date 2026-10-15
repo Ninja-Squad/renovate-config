@@ -10,10 +10,11 @@
         "@playwright/**"
       ],
       "groupName": "playwright",
-      "groupSlug": "playwright"
+      "groupSlug": "playwright",
+      "prCreation": "not-pending"
     },
     {
-      "description": "Keep pending Playwright npm releases in the grouped update",
+      "description": "Keep Playwright npm and Docker updates grouped while waiting for the npm cooldown",
       "matchDatasources": ["npm"],
       "matchPackageNames": ["playwright", "@playwright/**"],
       "minimumReleaseAge": "3 days",
