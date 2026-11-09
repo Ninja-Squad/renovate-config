@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "description": "Update Oxlint and its ESLint plugin together",
+      "matchDepNames": ["oxlint", "eslint-plugin-oxlint"],
+      "groupName": "aligned oxlint packages",
+      "groupSingleUpdates": true,
+      "minimumGroupSize": 2
+    }
+  ]
+}
